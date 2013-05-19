@@ -1,0 +1,40 @@
+github man
+
+- set up
+
+git init
+
+git config --global user.name "USER_NAME"
+git config --global user.email "YOUR_EMAIL@GMAIL.COM"
+
+git config --global color.ui auto
+
+
+
+- file add
+
+git add <filename>
+git add *
+
+git commit -m "commit message"
+
+
+- push
+
+git push origin master
+
+git pull
+
+- branch
+
+git branch MAKE
+git check MAKED
+
+git branch -a
+
+git marge MAKED
+
+
+- end
+
+new file - add - commit - push
