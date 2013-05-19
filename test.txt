@@ -9,7 +9,8 @@ git config --global user.email "YOUR_EMAIL@GMAIL.COM"
 
 git config --global color.ui auto
 
-
+git remote add origin <server>
+gir remote rm origin
 
 - file add
 
