@@ -1,0 +1,9 @@
+Exception: STATUS_INTEGER_DIVIDE_BY_ZERO at eip=004014DD
+eax=00000000 ebx=0180D276 ecx=00000001 edx=00000000 esi=61273FC8 edi=00000000
+ebp=0028AC68 esp=0028ABF0 program=C:\cygwin\home\corikachu\project\typ\a.exe, pid 3484, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028AC68  004014DD  (00000001, 0028AC90, 80010100, 61276F2A)
+0028ACF8  6100763A  (00000000, 0028CD78, 61006C50, 00000000)
+End of stack trace
