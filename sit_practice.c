@@ -37,9 +37,9 @@ int main(void)
 	{
 		system("clear");
 		printf(">>영문 타자 연습 프로그램 : 자리 연습 <<\n");
-		printf("진행도 : %d\%		\n",process*5);
-		printf("오타수 : %d			\n",miss);
-		printf("정확도 : %d\%		\n\n",accuracy);
+		printf("진행도 : %d%%		\n", process*5);
+		printf("오타수 : %d			\n", miss);
+		printf("정확도 : %d%%		\n\n", accuracy);
 	
 		/* 마지막 통계를 보여주며 엔터를 누를시만 메뉴로 복귀*/
 		if(i==20)
