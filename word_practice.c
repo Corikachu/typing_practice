@@ -41,7 +41,7 @@ int main(void)
 
 		rand_number = rand()%3;
 
-		printf("%s", word[rand_number][20]);
+		printf("%c", word[rand_number][20]);
 		printf("-");
 		
 		while(1)
