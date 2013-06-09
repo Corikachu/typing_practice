@@ -19,15 +19,15 @@ int getch()
 	return ch;
 }
 
-int main(void)
+void main(void)
 {
 	system("clear");
 
 	srand(time(NULL));
-	char word[3][20]={"name","salad","birthday"};
+	char word[3][30]={"name","salad","birthday"};
 	
-	char che[20]={0};
-	int i, rand_number;
+	char che[20];
+	int i, rand_number ,j=0,k=0,n=0;
 	int process=0, miss=0, pass=1, accuracy=0, try_number=0;
 
 	for(i=0 ; i<20 ; i++)
@@ -40,32 +40,53 @@ int main(void)
 		printf("정확도 : %d%%		\n\n",accuracy);
 
 		rand_number = rand()%3;
-
-		printf("%c", word[rand_number][20]);
-		printf("-");
 		
 		while(1)
 		{
-			int j=0;
-			che=getch();
-
-			if((che[j]=='\r')||(che[j]=='\n'))
+			printf("%c", word[rand_number][j]);
+			if(word[rand_number][j]=='\0')
 			{
+				j=0;
 				break;
 			}
-			printf("%c", che[j]);
 			j++;
+		}
+
+		printf("\n-");
+		
+		while(1)
+		{
+			che[k]=getch();
+
+			if((che[0]=='#')&&(che[1]=='#')&&(che[2]=='#'))
+			{
+				printf("%c", che[2]);
+				break;
+			}
+			else if(che[k]==10)
+			{
+				k=0;
+				break;
+			}
+
+			printf("%c", che[k]);
+
+			k++;
 		}
 		
 		while(1)
 		{
-			int j=0;
-			if(che[j]!=word[rand_number][j])
+			if(word[rand_number][n]!=che[n])
 			{
+				n=0;
 				miss++;
 				break;
 			}
+			
 		}
+		process++;
+		accuracy = (float)(process-miss)/(process);
 	}
-	return 0;
 }
+
+

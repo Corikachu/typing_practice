@@ -81,12 +81,15 @@ int main(void)
 		for (i = 0; i < 4; i++)
 			for (j = 0; j < 10; j++)
 				N[i][j] = strlen(text[i][j]); //N배열은 초기 행 별 글자수 받을때만 한번 씀
+
 		i = rand() % 4; //무작위 text 출력을 위한 난수 생성
+
 		while (line_count < 10){
 			if (cor + err != 0)
 				accur = (cor * 100) / (cor + err); //정확도 : 맞은개수 / 전체 * 100
 			else
 				accur = 0; //정확도 초기값(입력글자수 = 0)
+
 			//밑에서 입력했던 글자들을 지우고 정확도와 현재타수를 보여주는 정보창이 맨위에 출력되도록 화면정리
 			system("clear");
 			printf(">> 영문 타자 연습 프로그램 : 긴 글 연습 <<\n");
@@ -165,7 +168,7 @@ int main(void)
 			}
 			//시간 시점 = 문자입력시점, 기점은 시간의 흐름에 따라 변화
 			if (start != 0)
-				end = time(NULL);
+				end = time(NULL)+1; // 1초부터 시간이 흐름
 			else
 				start = time(NULL);
 			//걸린 시간이 0이 아닌경우 현재타수는 맞은개수/걸린시간(기점-시점) * 60(초)
